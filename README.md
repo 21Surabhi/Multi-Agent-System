@@ -1,6 +1,6 @@
 ## Overview
 
-This project implements a Multi-Agent System using LangGraph, Groq LLM, and Streamlit.
+This project implements a Multi-Agent AI System using LangGraph, Groq LLM, and Streamlit.
 
 The system routes the user's query to specialised agents based on the question. Each agent is responsible for a specific travel-related task, resulting in better responses.
 
@@ -12,6 +12,17 @@ The project currently consists of:
 - Budget Agent
 
 The system also supports multi-turn conversation memory, allowing follow-up questions to retain context from previous interactions.
+
+
+## How the Multi-Agent System works
+
+1. The user inserts a query.
+2. The query is then sent to Langgraph.
+3. The router analyzes the request.
+4. Based on the query, the router selects the most appropriate agent.
+5. The selected agent generated the response using Groq LLM.
+6. The response generated is sent to the user.
+7. The conversation history is saved so that queries can use context.
 
 ## Prerequisites
 
@@ -42,15 +53,6 @@ Multi-Agent System
 - graph – Defines the LangGraph workflow and controls the execution between the router and the specialized agents.
 - app.py – The main Streamlit application that interacts with the user and invokes the LangGraph.
 
-## How the Multi-Agent System works
-
-1. The user inserts a query.
-2. The query is then sent to Langgraph.
-3. The router analyzes the request.
-4. Based on the query, the router selects the most appropriate agent.
-5. The selected agent generated the response using Groq LLM.
-6. The response generated is sent to the user.
-7. The conversation history is saved so that queries can use context.
 
 ## How the router works  
 
