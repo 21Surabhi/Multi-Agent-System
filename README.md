@@ -69,6 +69,32 @@ Refer to [router.py](router/router.py)
    - budget
 7. LangGraph maps execution to the selected agent.
 
+
+# Specialized Agents
+
+The Multi Agent System consists of three specialized agents. Each agent is responsible for handling a specific category of travel-related queries. Once the Router Agent identifies the user's query, it forwards the request to the appropriate specialized agent.
+
+### Destination Agent
+
+Refer to file [destination_agent.py](agents/destination_agent.py).
+
+The Destination Agent provides travel destination recommendations based on the user's query. It suggests tourist attractions, sightseeing locations, popular destinations, and places to visit while considering the previous conversation for context.
+
+
+### Booking Agent
+
+Refer to file [booking_agent.py](agents/booking_agent.py).
+
+The Booking Agent handles booking-related queries. It provides recommendations for hotels, flights, travel reservations, and accommodation based on the user's travel requirements and conversation history.
+
+
+### Budget Agent
+
+Refer to file [budget_agent.py](agents/budget_agent.py).
+
+The Budget Agent assists users with travel budgeting. It estimates trip expenses, provides budget plans, and suggests cost-effective travel options based on the user's destination and preferences.
+
+
 # How the Destination Agent Works
 
 Refer to [destination_agent.py](agent/destination_agent.py)
